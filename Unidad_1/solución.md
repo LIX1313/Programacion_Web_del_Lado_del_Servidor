@@ -32,31 +32,31 @@ Asegúrate de documentar tu configuración y cualquier instrucción especial par
 
 ### Captura de pantalla
 
-![Formulario_PC](Unidad_1/assets/images/Captura_1_Formulario_PC.jpeg)
+![Formulario_PC](assets/images/Captura_1_Formulario_PC.jpeg)
 
 Estado del formulario sin errores.
 
-![Mensaje_Error](Unidad_1/assets/images/Captura_2_Mensaje_Error.jpeg)
+![Mensaje_Error](assets/images/Captura_2_Mensaje_Error.jpeg)
 
 Cuando el formulario señala los campos faltantes.
 
-![Mensaje_Error_Correo](Unidad_1/assets/images/Captura_3_Mensaje_Error_Correo.jpeg)
+![Mensaje_Error_Correo](assets/images/Captura_3_Mensaje_Error_Correo.jpeg)
 
 Cuando se señala que el correo fue ingresado uno que no cumple con las características de un correo y se señala su corrección.
 
-![Formulario_Celular](Unidad_1/assets/images/Captura_4_Celular.jpeg)
+![Formulario_Celular](assets/images/Captura_4_Celular.jpeg)
 
 Formulario en vista movil.
 
-![Mensaje_Exito](Unidad_1/assets/images/Captura_5_Mensaje_Exito.png)
+![Mensaje_Exito](assets/images/Captura_5_Mensaje_Exito.png)
 
 Mensaje de éxito si el formulario se realiza correctamente y que dura 3 segundos.
 
-![Mostrar_Datos_PC](Unidad_1/assets/images/Captura_6_Mostrar_datos_PC.jpeg)
+![Mostrar_Datos_PC](assets/images/Captura_6_Mostrar_datos_PC.jpeg)
 
 Página para mostrar los datos recopilados por el formulario.
 
-![Mostrar_Datos_Celular](Unidad_1/assets/images/Captura_7_Mostrar_datos_Movil.jpeg)
+![Mostrar_Datos_Celular](assets/images/Captura_7_Mostrar_datos_Movil.jpeg)
 
 En versión movil, se cambia a tarjetas para más utilidad de uso.
 
