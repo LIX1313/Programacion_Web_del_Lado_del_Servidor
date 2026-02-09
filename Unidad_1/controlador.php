@@ -13,24 +13,31 @@ class Controlador
 
         $modelo = new Modelo($con);
 
-        $nombre = $datos['Nombre'];
-        $apellido = $datos['Apellido'];
-        $correo = $datos['correo'];
+        $nombre = trim($datos['Nombre'] ?? '');
+        $apellido = trim($datos['Apellido'] ?? '');
+        $correo = trim($datos['correo'] ?? '');
 
-        $tipo_consulta = $datos['tipo'];
+        $tipo_consulta = trim($datos['tipo'] ?? '');
 
-        if ($tipo_consulta == "general"){
+        if ($tipo_consulta == "general") {
             $tipo = 1;
-        } elseif ($tipo_consulta == "soporte"){
+        } elseif ($tipo_consulta == "soporte") {
             $tipo = 2;
         }
 
-        $mensaje = $datos['mensaje'];
+        $mensaje = trim($datos['mensaje'] ?? '');
 
-        $modelo->guardarContacto($nombre, $apellido, $correo, $tipo, $mensaje);
-
-        header("Location: index.php?exito=1");
-        exit();
+        if (
+            $nombre !== '' &&
+            $apellido !== '' &&
+            $mensaje !== '' &&
+            $tipo !== '' &&
+            filter_var($correo, FILTER_VALIDATE_EMAIL)
+        ) {
+            $modelo->guardarContacto($nombre, $apellido, $correo, $tipo, $mensaje);
+            header("Location: index.php?exito=1");
+            exit;
+        }
     }
 
     public function obtenerContactos()
