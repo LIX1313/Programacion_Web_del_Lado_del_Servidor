@@ -1,7 +1,8 @@
 ### Enlaces
 
-- URL en GITHUB de tu proyecto:
-- URL del site:[(https://github.com/LIX1313/Programacion_Web_del_Lado_del_Servidor)]
+- URL en GITHUB de tu proyecto: [(https://github.com/LIX1313/Programacion_Web_del_Lado_del_Servidor)]
+- URL del site:[(https://marioluis.free.nf/index.php)]
+- Sitio para ver datos - [Mostrar][(https://marioluis.free.nf/mostrar.php)]
 ## Autor
 - Nombre completo: Luis Mario Ireta Xiu 
 - N° Control: 221k0042
