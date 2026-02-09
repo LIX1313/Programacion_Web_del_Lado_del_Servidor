@@ -49,29 +49,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['Nombre']) && isset($_P
     <div class="formulario">
       <form action="index.php" method="post" id="formulario" novalidate>
         <div class="titulo">
-          <h2>Contáctanos</h2>
+          <h3>Contáctanos</h3>
         </div>
         <!--Campo que tiene 2 elementos-->
         <div class="campo_secundario">
           <div class="campo_uno">
             <label for="Nombre">Nombre <span class="requerido">*</span></label>
-            <input type="text" name="Nombre" required>
+            <input type="text" name="Nombre" placeholder=" " required>
             <small class="mensaje-error">Este campo es obligatorio</small>
           </div>
           <div class="campo_dos">
             <label for="Apellido">Apellido <span class="requerido">*</span></label>
-            <input type="text" name="Apellido" required>
+            <input type="text" name="Apellido" placeholder=" " required>
             <small class="mensaje-error">Este campo es obligatorio</small>
           </div>
         </div>
         <label for="correo">Dirección de correo electrónico <span class="requerido">*</span></label>
         <div class="campo_unico">
-          <input type="email" name="correo" required>
+          <input type="email" name="correo" placeholder=" " required>
           <small class="mensaje-error">Este campo es obligatorio</small>
           <small class="mensaje-error mensaje-email-invalido">
             Por favor, introduce una dirección de correo electrónico válida
           </small>
-
         </div>
         <label>Tipo de consulta *</label>
         <div class="opciones">
@@ -87,10 +86,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['Nombre']) && isset($_P
         </div>
         <label for="mensaje">Mensaje <span class="requerido">*</span></label>
         <div class="campo_unico">
-          <textarea name="mensaje" id="mensaje" rows="5" required></textarea>
+          <textarea name="mensaje" id="mensaje" rows="5" placeholder=" " required></textarea>
           <small class="mensaje-error">Este campo es obligatorio</small>
         </div>
-        <div class="campo_unico_correo">
+        <div class="campo_unico_consentimiento">
           <label class="checkbox">
             <input type="checkbox" required>
             <span class="check"></span>
@@ -158,7 +157,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['Nombre']) && isset($_P
         valido = false;
       }
 
-
       /* RADIOS */
       const radios = form.querySelectorAll('input[type="radio"][name="tipo"]');
       const contenedorRadios = form.querySelector(".opciones");
@@ -173,7 +171,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['Nombre']) && isset($_P
 
       /* CHECKBOX */
       const checkbox = form.querySelector("input[type=checkbox][required]");
-      const mensajeCheckbox = checkbox.closest(".campo_unico_correo")
+      const mensajeCheckbox = checkbox.closest(".campo_unico_consentimiento")
         .querySelector(".mensaje-error");
 
       if (!checkbox.checked) {
