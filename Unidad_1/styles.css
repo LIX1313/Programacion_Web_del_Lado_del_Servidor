@@ -39,14 +39,22 @@ body {
 
 .contenido {
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     display: block;
     margin: auto;
+    box-sizing: border-box;
 }
 
 .titulo {
     width: 100%;
+    height: min-content;
 }
+
+.titulo h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
 
 .titulo_mostrar {
     width: 100%;
@@ -58,21 +66,19 @@ body {
 .mensaje_exito {
     width: 360px;
     max-width: calc(100% - 40px);
-
     position: fixed;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-
     z-index: 1000;
     animation: slideDown 0.4s ease;
 }
 
 .contenido_mensaje {
-    padding: 16px 20px;
-    background-color: var(--neutral-grey-darker); /* verde oscuro */
-    border-radius: 14px;
-
+    padding: 15px;
+    background-color: var(--neutral-grey-darker);
+    /* verde oscuro */
+    border-radius: 15px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
@@ -87,7 +93,6 @@ body {
 .titulo_mensaje img {
     width: 20px;
     height: 20px;
-
     background-color: #e6f7f1;
     padding: 4px;
     border-radius: 50%;
@@ -95,15 +100,13 @@ body {
 
 /* Título */
 .titulo_mensaje h6 {
-    font-size: 15px;
     font-weight: 700;
     color: var(--neutral-white);
     margin: 0;
 }
 
 /* Texto secundario */
-.contenido_mensaje > h6 {
-    font-size: 13px;
+.contenido_mensaje>h6 {
     font-weight: 400;
     line-height: 1.4;
     margin: 4px 0 0;
@@ -116,6 +119,7 @@ body {
         opacity: 0;
         transform: translate(-50%, -10px);
     }
+
     to {
         opacity: 1;
         transform: translate(-50%, 0);
@@ -127,11 +131,12 @@ body {
 .mensaje_error_email {
     display: none;
     color: var(--primary-red);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
 }
 
 input.error,
 textarea.error {
+    font-size: 1rem;
     border-color: var(--primary-red);
 }
 
@@ -142,7 +147,7 @@ textarea.error {
 
 .formulario {
     width: 55%;
-    margin: auto;
+    margin: 3rem auto;
     background-color: var(--neutral-white);
     padding: 1rem;
     display: block;
@@ -157,13 +162,26 @@ textarea.error {
 
 /* Estilos de inputs */
 
-input:not([type="radio"]):not([type="checkbox"]) {
+input[type="text"],
+input[type="email"] {
     width: 100%;
     padding: 15px;
     border: 1px solid #bbb;
     border-radius: 6px;
     box-sizing: border-box;
     color: var(--neutral-grey-darker);
+}
+
+input[type="text"]:hover:not(:invalid),
+input[type="email"]:hover:not(:invalid),
+textarea:hover:not(:invalid) {
+    border-color: var(--primary-medium);
+}
+
+input[type="text"]::after,
+input[type="email"]::after {
+    outline: none;
+    border-color: var(--primary-medium);
 }
 
 textarea {
@@ -175,11 +193,6 @@ textarea {
     resize: vertical;
 }
 
-input:hover {
-    outline: none;
-    border-color: var(--primary-medium);
-}
-
 textarea:hover {
     outline: none;
     border-color: var(--primary-medium);
@@ -187,8 +200,8 @@ textarea:hover {
 
 
 label {
-    font-size: 16px;
     display: block;
+    font-size: 16px;
     margin-bottom: 6px;
     font-weight: 500;
     color: var(--neutral-grey-darker);
@@ -206,6 +219,7 @@ label {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
+    margin-bottom: 1rem;
     /* permite salto de línea */
 }
 
@@ -217,6 +231,7 @@ label {
     display: flex;
     align-items: center;
     gap: 10px;
+    font-size: 0.8rem;
     cursor: pointer;
     transition: border-color 0.2s;
 }
@@ -227,7 +242,6 @@ label {
     margin-top: 6px;
     display: none;
     color: var(--primary-red);
-    font-size: 0.85rem;
 }
 
 .opcion:hover {
@@ -280,8 +294,11 @@ label {
     gap: 10px;
     cursor: pointer;
     font-family: Arial, sans-serif;
-    font-size: 14px;
     color: #333;
+}
+
+.checkbox .texto {
+    font-size: 0.85rem;
 }
 
 /* Ocultar checkbox real */
@@ -312,7 +329,7 @@ label {
 }
 
 /* Texto largo */
-.texto {
+.campo_unico .texto {
     line-height: 1.4;
 }
 
@@ -324,7 +341,7 @@ button {
     color: white;
     border: none;
     border-radius: 6px;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
 }
 
@@ -366,7 +383,6 @@ table td {
 
 table th {
     text-transform: uppercase;
-    font-size: 14px;
     letter-spacing: 0.05em;
 }
 
@@ -384,9 +400,15 @@ table tbody tr:hover {
 @media (min-width: 1024px) {
 
     /* Estilos para laptop */
+
+    .formulario {
+        width: 55%;
+    }
+
     .campo_secundario {
         display: flex;
         width: 100%;
+        margin-bottom: 1rem;
     }
 
     .campo_uno,
@@ -402,13 +424,38 @@ table tbody tr:hover {
         display: flex;
     }
 
+    .opcion {
+        font-size: 0.9rem;
+    }
+
     .tarjetas,
     .tarjeta {
         display: none;
     }
+
+    .titulo h2 {
+        font-size: 1.75rem;
+        /* 28px */
+    }
+
+    .checkbox .texto {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 1.05rem;
+    }
+
+    .campo_unico .texto {
+        font-size: 0.8rem;
+    }
 }
 
 @media (min-width: 1440px) {
+
+    .formulario {
+        width: 55%;
+    }
 
     /* Estilos para escritorio */
     .campo_secundario {
@@ -429,12 +476,26 @@ table tbody tr:hover {
         display: flex;
     }
 
+    .opcion {
+        font-size: 0.9rem;
+    }
+
     .tarjetas {
         display: none;
+    }
+
+    .campo_unico .texto {
+        font-size: 0.8rem;
     }
 }
 
 @media (max-width: 768px) {
+
+    /* Estilos para tablet */
+
+    .formulario {
+        width: 95%;
+    }
 
     .opciones {
         display: block;
@@ -449,7 +510,7 @@ table tbody tr:hover {
     .campo_secundario {
         display: block;
         width: 100%;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
     }
 
     /* Ocultar tabla */
@@ -489,10 +550,7 @@ table tbody tr:hover {
         flex-direction: column;
     }
 
-    .campo {
-        display: flex;
-        justify-content: space-between;
-    }
+
 
     .campo-mensaje {
         flex-direction: column;
@@ -504,9 +562,18 @@ table tbody tr:hover {
         min-width: 120px;
     }
 
+    .campo {
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
     .valor {
-        color: var(--neutral-grey-darker);
         text-align: right;
+        max-width: 60%;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+        color: var(--neutral-grey-darker);
     }
 
     .valor-mensaje {
@@ -521,12 +588,22 @@ table tbody tr:hover {
         padding: 10px;
         border-radius: 15px;
     }
+
+    .campo_unico .texto {
+        font-size: 0.7rem;
+    }
+
 }
 
 
 @media (max-width: 375px) {
 
     /* Estilos para dispositivos móviles */
+
+    .formulario {
+        width: 95%;
+    }
+
     .campo_secundario {
         display: block;
         width: 100%;
@@ -588,6 +665,15 @@ table tbody tr:hover {
     .campo {
         display: flex;
         justify-content: space-between;
+        gap: 8px;
+    }
+
+    .valor {
+        text-align: right;
+        max-width: 60%;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+        color: var(--neutral-grey-darker);
     }
 
     .campo-mensaje {
@@ -598,11 +684,6 @@ table tbody tr:hover {
         font-weight: 600;
         color: var(--neutral-grey-darker);
         min-width: 120px;
-    }
-
-    .valor {
-        color: var(--neutral-grey-darker);
-        text-align: right;
     }
 
     .valor-mensaje {
@@ -616,5 +697,9 @@ table tbody tr:hover {
         background: var(--neutral-white);
         padding: 10px;
         border-radius: 15px;
+    }
+
+    .campo_unico .texto {
+        font-size: 0.7rem;
     }
 }
