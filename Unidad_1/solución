@@ -1,0 +1,79 @@
+Solución del formulario de contacto
+
+## Tabla de contenidos
+
+- [Resumen](#resumen)
+  - [Captura de pantalla](#captura-de-pantalla)
+  - [Enlaces](#enlaces)
+- [Autor](#autor)
+
+## Resumen
+
+Tu desafío es construir este formulario de contacto y lograr que se vea lo más cercano posible al diseño. Presta especial atención a hacer que este formulario sea accesible. Construir formularios accesibles es una habilidad clave para los desarrolladores front-end. 
+
+Además de construir el frontend del formulario de contacto, también deberás implementar una parte de back-end para manejar el envío y recepción de información desde una base de datos. Así que este es un desafío perfecto para identificar el nivel de conocimiento en programacion web.
+
+### El desafío
+
+Tus usuarios deberían poder:
+
+- Completar el formulario y ver un mensaje de éxito al enviarlo correctamente
+- Recibir mensajes de validación del formulario si:
+  - Se ha omitido un campo obligatorio
+  - La dirección de correo electrónico no está correctamente formateada
+- Completar el formulario solo usando su teclado
+- Tener los inputs, mensajes de error y el mensaje de éxito anunciados en su lector de pantalla
+- Ver el diseño óptimo para la interfaz dependiendo del tamaño de la pantalla de su dispositivo
+- Ver estados de hover y focus para todos los elementos interactivos en la página
+- Enviar el formulario y almacenar los datos en la base de datos.
+- Recuperar y ver todos los envíos del formulario desde la base de datos.
+
+Asegúrate de documentar tu configuración y cualquier instrucción especial para el uso o acceso al site del formulario  para que el docente puedan entender y ejecutar tu proyecto fácilmente.
+
+### Captura de pantalla
+
+![](Unidad_1/assets/images/Captura_1_Formulario_PC.jpeg)
+
+Estado del formulario sin errores.
+
+![](Unidad_1/assets/images/Captura_2_Mensaje_Error.jpeg)
+
+Cuando el formulario señala los campos faltantes.
+
+![](Unidad_1/assets/images/Captura_3_Mensaje_Error_Correo.jpeg)
+
+Cuando se señala que el correo fue ingresado uno que no cumple con las características de un correo y se señala su corrección.
+
+![](Unidad_1/assets/images/Captura_4_Celular.jpeg)
+
+Formulario en vista movil.
+
+![](Unidad_1/assets/images/Captura_5_Mensaje_Exito.png)
+
+Mensaje de éxito si el formulario se realiza correctamente y que dura 3 segundos.
+
+![](Unidad_1/assets/images/Captura_6_Mostrar_datos_PC.jpeg)
+
+Página para mostrar los datos recopilados por el formulario.
+
+![](Unidad_1/assets/images/Captura_7_Mostrar_datos_Movil.jpeg)
+
+En versión movil, se cambia a tarjetas para más utilidad de uso.
+
+### Enlaces
+
+- URL en GITHUB de tu proyecto: [(https://github.com/LIX1313/Programacion_Web_del_Lado_del_Servidor)]
+- URL del site:[(https://marioluis.free.nf/index.php)]
+- Sitio para ver datos - [Mostrar][(https://marioluis.free.nf/mostrar.php)]
+
+## Autor
+- Nombre completo: Luis Mario Ireta Xiu 
+- N° Control: 221k0042
+- Grupo: B
+- Sitio del formulario - [Formulario de contacto][(https://marioluis.free.nf/index.php)]
+- Sitio para ver datos - [Mostrar][(https://marioluis.free.nf/mostrar.php)]
+- Github - [@LIX1313][(https://github.com/LIX1313/Programacion_Web_del_Lado_del_Servidor)]
+
+
+
+
