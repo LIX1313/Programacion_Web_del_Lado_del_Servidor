@@ -1,0 +1,705 @@
+/*Estilo general*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    font-weight: 400;
+    background-color: var(--primary-lighter);
+}
+
+/*
+    ## Colores
+### Primario
+
+- Green 200 (lighter): hsl(148, 38%, 91%)
+- Green 600 (medium): hsl(169, 82%, 27%)
+- Red: hsl(0, 66%, 54%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Grey 500 (medium): hsl(186, 15%, 59%)
+- Grey 900 (darker): hsl(187, 24%, 22%)
+    */
+:root {
+    --primary-lighter: hsl(148, 38%, 91%);
+    --primary-medium: hsl(169, 82%, 27%);
+    --primary-red: hsl(0, 66%, 54%);
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-grey-medium: hsl(186, 15%, 59%);
+    --neutral-grey-darker: hsl(187, 24%, 22%);
+}
+
+/*Los diseños se crearon con los siguientes anchos:
+- Mobile: 375px
+- Desktop: 1440px*/
+
+.contenido {
+    width: 100%;
+    height: 120vh;
+    display: block;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.titulo {
+    width: 100%;
+    height: min-content;
+}
+
+.titulo h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+
+.titulo_mostrar {
+    width: 100%;
+    text-align: center;
+}
+
+/* MENSAJE DE ÉXITO   */
+
+.mensaje_exito {
+    width: 360px;
+    max-width: calc(100% - 40px);
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    animation: slideDown 0.4s ease;
+}
+
+.contenido_mensaje {
+    padding: 15px;
+    background-color: var(--neutral-grey-darker);
+    /* verde oscuro */
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.titulo_mensaje {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+}
+
+/* Icono */
+.titulo_mensaje img {
+    width: 20px;
+    height: 20px;
+    background-color: #e6f7f1;
+    padding: 4px;
+    border-radius: 50%;
+}
+
+/* Título */
+.titulo_mensaje h6 {
+    font-weight: 700;
+    color: var(--neutral-white);
+    margin: 0;
+}
+
+/* Texto secundario */
+.contenido_mensaje>h6 {
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 4px 0 0;
+    color: #d1e8e3;
+}
+
+/* Animación */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+
+.mensaje-error,
+.mensaje_error_email {
+    display: none;
+    color: var(--primary-red);
+    font-size: 0.8rem;
+}
+
+input.error,
+textarea.error {
+    font-size: 1rem;
+    border-color: var(--primary-red);
+}
+
+.check.error {
+    border-color: var(--primary-red);
+}
+
+
+.formulario {
+    width: 55%;
+    margin: 3rem auto;
+    background-color: var(--neutral-white);
+    padding: 1rem;
+    display: block;
+    border-radius: 15px;
+}
+
+.campo_unico {
+    width: 100%;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Estilos de inputs */
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: var(--neutral-grey-darker);
+}
+
+input[type="text"]:hover:not(:invalid),
+input[type="email"]:hover:not(:invalid),
+textarea:hover:not(:invalid) {
+    border-color: var(--primary-medium);
+}
+
+input[type="text"]::after,
+input[type="email"]::after {
+    outline: none;
+    border-color: var(--primary-medium);
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+textarea:hover {
+    outline: none;
+    border-color: var(--primary-medium);
+}
+
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: var(--neutral-grey-darker);
+}
+
+.requerido {
+    color: var(--primary-medium);
+    /* verde como en la imagen */
+    font-weight: bold;
+}
+
+/*Estilos de opciones de check*/
+
+.opciones {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    /* permite salto de línea */
+}
+
+.opcion {
+    flex: 1;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.opciones .mensaje-error {
+    flex-basis: 100%;
+    /* ocupa toda la fila */
+    margin-top: 6px;
+    display: none;
+    color: var(--primary-red);
+}
+
+.opcion:hover {
+    outline: none;
+    border-color: var(--primary-medium);
+}
+
+/* Ocultar radio real */
+.opcion input {
+    display: none;
+}
+
+/* Círculo */
+.radio {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #bbb;
+    border-radius: 50%;
+    position: relative;
+}
+
+/* Punto interno */
+.opcion input:checked+.radio::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: var(--primary-medium);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Borde activo */
+.opcion input:checked~ {
+    border-color: var(--primary-medium);
+}
+
+/* Alternativa segura */
+.opcion:has(input:checked) {
+    border-color: var(--primary-medium);
+}
+
+/* Consentimiento */
+
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.checkbox .texto {
+    font-size: 0.85rem;
+}
+
+/* Ocultar checkbox real */
+.checkbox input {
+    display: none;
+}
+
+/* Caja del checkbox */
+.check {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #bbb;
+    border-radius: 3px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+/* Check interno */
+.checkbox input:checked+.check::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: green;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Texto largo */
+.campo_unico .texto {
+    line-height: 1.4;
+}
+
+/*Botón para enviar*/
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-medium);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgb(18, 78, 65);
+}
+
+/*Mostrar datos*/
+
+.tarjetas {
+    display: none;
+}
+
+.tabla {
+    width: 90%;
+    display: block;
+    margin: 10px auto;
+}
+
+table {
+    width: 100%;
+    margin: auto;
+    background: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    border-collapse: collapse;
+}
+
+table thead {
+    background-color: var(--primary-medium);
+    color: #ffffff;
+}
+
+table th,
+table td {
+    padding: 14px 16px;
+    text-align: left;
+}
+
+table th {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Filas */
+table tbody tr {
+    border-bottom: 1px solid #e5e7eb;
+    transition: background-color 0.3s;
+}
+
+table tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+
+@media (min-width: 1024px) {
+
+    /* Estilos para laptop */
+
+    .formulario {
+        width: 55%;
+    }
+
+    .campo_secundario {
+        display: flex;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .campo_uno,
+    .campo_dos {
+        width: 50%;
+    }
+
+    .campo_uno {
+        margin-right: 1rem;
+    }
+
+    .opciones {
+        display: flex;
+    }
+
+    .opcion {
+        font-size: 0.9rem;
+    }
+
+    .tarjetas,
+    .tarjeta {
+        display: none;
+    }
+
+    .titulo h2 {
+        font-size: 1.75rem;
+        /* 28px */
+    }
+
+    .checkbox .texto {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 1.05rem;
+    }
+
+    .campo_unico .texto {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 1440px) {
+
+    .formulario {
+        width: 55%;
+    }
+
+    /* Estilos para escritorio */
+    .campo_secundario {
+        display: flex;
+        width: 100%;
+    }
+
+    .campo_uno,
+    .campo_dos {
+        width: 50%;
+    }
+
+    .campo_uno {
+        margin-right: 1rem;
+    }
+
+    .opciones {
+        display: flex;
+    }
+
+    .opcion {
+        font-size: 0.9rem;
+    }
+
+    .tarjetas {
+        display: none;
+    }
+
+    .campo_unico .texto {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Estilos para tablet */
+
+    .formulario {
+        width: 95%;
+    }
+
+    .opciones {
+        display: block;
+    }
+
+    .campo_uno,
+    .campo_dos {
+        width: 100%;
+        display: block;
+    }
+
+    .campo_secundario {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    /* Ocultar tabla */
+    .tabla {
+        display: none;
+    }
+
+    /* Mostrar tarjetas */
+    .tarjetas {
+        display: block;
+        width: 90%;
+        margin: 1rem auto;
+    }
+
+    .tarjeta {
+        background: var(--neutral-white);
+        border-radius: 15px;
+        padding: 15px;
+        margin-bottom: 1rem;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Header */
+    .tarjeta-header {
+        border-bottom: 1px;
+        padding-bottom: 8px;
+        margin-bottom: 12px;
+    }
+
+    .tarjeta-header .id {
+        color: var(--neutral-grey-darker);
+    }
+
+    /* Body */
+    .tarjeta-body {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+    .campo-mensaje {
+        flex-direction: column;
+    }
+
+    .tarjeta-titulo {
+        font-weight: 600;
+        color: var(--neutral-grey-darker);
+        min-width: 120px;
+    }
+
+    .campo {
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    .valor {
+        text-align: right;
+        max-width: 60%;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+        color: var(--neutral-grey-darker);
+    }
+
+    .valor-mensaje {
+        color: var(--neutral-grey-darker);
+        text-align: left;
+        padding: 15px;
+    }
+
+    .campo-mensaje .valor {
+        text-align: left;
+        background: var(--neutral-white);
+        padding: 10px;
+        border-radius: 15px;
+    }
+
+    .campo_unico .texto {
+        font-size: 0.7rem;
+    }
+
+}
+
+
+@media (max-width: 375px) {
+
+    /* Estilos para dispositivos móviles */
+
+    .formulario {
+        width: 95%;
+    }
+
+    .campo_secundario {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .campo_uno,
+    .campo_dos {
+        width: 100%;
+        display: block;
+    }
+
+    .opciones {
+        display: block;
+    }
+
+    .tabla,
+    table {
+        display: none;
+    }
+
+    /* Ocultar tabla */
+    .tabla {
+        display: none;
+    }
+
+    /* Mostrar tarjetas */
+    .tarjetas {
+        display: block;
+        width: 90%;
+        margin: 1rem auto;
+    }
+
+    .tarjeta {
+        background: var(--neutral-white);
+        border-radius: 15px;
+        padding: 15px;
+        margin-bottom: 1rem;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Header */
+    .tarjeta-header {
+        border-bottom: 1px;
+        padding-bottom: 8px;
+        margin-bottom: 12px;
+    }
+
+    .tarjeta-header .id {
+        color: var(--neutral-grey-darker);
+    }
+
+    /* Body */
+    .tarjeta-body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .campo {
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    .valor {
+        text-align: right;
+        max-width: 60%;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+        color: var(--neutral-grey-darker);
+    }
+
+    .campo-mensaje {
+        flex-direction: column;
+    }
+
+    .tarjeta-titulo {
+        font-weight: 600;
+        color: var(--neutral-grey-darker);
+        min-width: 120px;
+    }
+
+    .valor-mensaje {
+        color: var(--neutral-grey-darker);
+        text-align: left;
+        padding: 15px;
+    }
+
+    .campo-mensaje .valor {
+        text-align: left;
+        background: var(--neutral-white);
+        padding: 10px;
+        border-radius: 15px;
+    }
+
+    .campo_unico .texto {
+        font-size: 0.7rem;
+    }
+}
