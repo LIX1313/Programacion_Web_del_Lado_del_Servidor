@@ -63,6 +63,17 @@ var proyector = {
   color: "blanco",
   costo: 15000,
   antiguedad_anos: 10,
+  conexion: "HDMI y Internet"
+};
+console.log(proyector.marca);
+
+console.log("=============");
+console.log("Ejercicio h");
+var proyector = {
+  marca: "Epson",
+  color: "blanco",
+  costo: 15000,
+  antiguedad_anos: 10,
   conexion: "HDMI y Internet",
   descripcion: function () {
     return (
@@ -82,30 +93,22 @@ var proyector = {
 console.log(proyector.descripcion());
 
 console.log("=============");
-console.log("Ejercicio h");
-function ver_valor(objeto, propiedad) {
-  return objeto[propiedad];
-}
-
-console.log(ver_valor(proyector, "marca"));
-
-console.log("=============");
 console.log("Ejercicio j");
 console.log("Inicio de simulación de la operación asincróna");
 
-let valor_prueba = 0;
+function funcion_asincrona (numero, callback){
 setTimeout(() => {
-  valor_prueba += 2;
-  console.log("Finalización de la simulación");
-  console.log("Valor prueba es:" + valor_prueba);
-}, 0);
-
-for (let p = 0; p < 10; p++) {
-  console.log(
-    "El valor de p es:" + p + " y el valor prueba es:" + valor_prueba,
-  );
+  var valor = 5;
+  const resultado = numero ** valor;
+  callback(resultado);
+}, 100);
 }
 
+function mostrar_resultado (valor){
+  console.log("El valor del exponente es: "+valor);
+}
+
+funcion_asincrona(5, mostrar_resultado);
 console.log("Fin de simulación de la operación asincróna");
 
 console.log("=============");
