@@ -1,4 +1,7 @@
 /*
+
+By: Luis Mario Ireta Xiu
+
 1- La diferencia con un modulo nativo es que viene incluido dentro del NodeJS y puede usarse directamente 
 (solo se llama), en cambio, el de NPM es externo y se tiene que instalar con npm install 
 para ampliar funcionalidades.
@@ -14,4 +17,5 @@ así el repositorio solo vincula los modulos de acuerdo al package.json, no se s
 genera nuevamente npm install, lo que evita subir archivos innecesarios al repositorio.
 b) Al ejecutar npm install, se instala automáticamente las dependencias especificadas y crea
 la carpeta node_modulos junto con el archivo package-lock.json.
+
 */
