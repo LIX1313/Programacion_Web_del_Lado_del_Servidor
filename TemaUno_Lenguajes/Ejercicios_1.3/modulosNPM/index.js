@@ -1,4 +1,4 @@
-//By: Luis Mario Ireta Xiu
+//Hecho por Luis Mario Ireta Xiu
 
 import generateName from "sillyname";
 import { randomSuperhero } from "superheroes";
