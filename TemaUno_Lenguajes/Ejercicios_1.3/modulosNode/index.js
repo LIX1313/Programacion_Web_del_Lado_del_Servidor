@@ -1,3 +1,5 @@
+//By: Luis Mario Ireta Xiu
+
 const fs = require("fs"); //Importa la herramienta de sistema de archivos
 
 fs.writeFile('archivo.txt', 'Hola desde NodeJS', (err) => {
@@ -18,3 +20,4 @@ async function logFile() {
   }
 }
 logFile();
+
