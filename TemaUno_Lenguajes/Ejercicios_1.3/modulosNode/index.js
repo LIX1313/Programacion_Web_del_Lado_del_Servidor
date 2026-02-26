@@ -1,10 +1,10 @@
-//By: Luis Mario Ireta Xiu
+//Hecho por: Luis Mario Ireta Xiu
 
-const fs = require("fs"); //Importa la herramienta de sistema de archivos
+const fs = require("fs");
 
-fs.writeFile('archivo.txt', 'Hola desde NodeJS', (err) => {
-    if (err) throw err;
-    console.log('El archivo ha sido creado con éxito.');
+fs.writeFile("archivo.txt", "Hola desde NodeJS", (err) => {
+  if (err) throw err;
+  console.log("El archivo ha sido creado con éxito.");
 });
 
 const { readFile } = require("node:fs/promises");
@@ -20,4 +20,3 @@ async function logFile() {
   }
 }
 logFile();
-
