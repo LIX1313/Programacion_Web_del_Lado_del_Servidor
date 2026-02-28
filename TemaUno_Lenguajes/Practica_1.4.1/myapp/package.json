@@ -1,0 +1,23 @@
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/LIX1313/Programacion_Web_del_Lado_del_Servidor#readme",
+  "bugs": {
+    "url": "https://github.com/LIX1313/Programacion_Web_del_Lado_del_Servidor/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LIX1313/Programacion_Web_del_Lado_del_Servidor.git"
+  },
+  "license": "ISC",
+  "author": "Luis Mario Ireta Xiu",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
