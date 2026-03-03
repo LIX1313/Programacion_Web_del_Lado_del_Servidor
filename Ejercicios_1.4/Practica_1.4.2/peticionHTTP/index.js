@@ -1,5 +1,5 @@
 //AA 1.4.2 
-//Por Luis Mario Ireta Xiu
+//Por Luis Mario Ireta Xiu.
 import express from "express";
 
 const app = express();
