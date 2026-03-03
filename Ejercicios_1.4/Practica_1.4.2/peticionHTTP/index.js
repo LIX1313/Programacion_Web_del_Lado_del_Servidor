@@ -10,19 +10,19 @@ app.get('/', (req, res) => {
     res.sendStatus(200);
 });
 
-app.get('/registro', (req,res) =>{
+app.post('/registro', (req,res) =>{
     res.sendStatus(201);
 });
 
-app.get('/usuario/actualizar', (req,res) => {
+app.put('/usuario/actualizar', (req,res) => {
     res.sendStatus(200);
 });
 
-app.get('/usuario/modificar', (req,res) => {
+app.patch('/usuario/modificar', (req,res) => {
     res.sendStatus(200);
 });
 
-app.get('/usuario/eliminar', (req,res) => {
+app.delete('/usuario/eliminar', (req,res) => {
     res.sendStatus(200);
 });
 
