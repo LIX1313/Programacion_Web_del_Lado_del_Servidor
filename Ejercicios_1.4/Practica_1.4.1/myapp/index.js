@@ -17,6 +17,10 @@ app.get("/about", (req, res) => {
     res.send("<h1>Acerca de </h1>");
 });
 
+app.get("/contacto", (req,res) => {
+    res.send("<h1>Tel: 983 106 6008</h1>");
+});
+
 app.use((req, res) => {
     res.status(404).send("<h1>404 Not Found</h1>");
 });
