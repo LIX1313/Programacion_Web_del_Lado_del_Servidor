@@ -22,6 +22,16 @@ activo = True
 #3.2 Estructuras de Selección (if / switch)
 if edad >= 18:
     print("Mayor de edad")
+
+numeros1 = [10, 20, 30, 40, 50]
+
+numero2 = int(input("Ingresa un número: "))
+
+if numero2 in numeros1:
+    print("El número está en la lista")
+else:
+    print("El número NO está en la lista")
+    
 #3.3 Iteración (for y while)
 for i in range(5):
     print(i)

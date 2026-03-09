@@ -80,6 +80,42 @@ function procesar(fn, valor){
 function print(x) {
     return x * 2;
 }
-
+//Clases
 console.log(procesar(print, 120));
 
+class Persona {
+    constructor(nombre, edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    saludar() {
+        console.log("Hola, soy " + this.nombre);
+    }
+}
+//Arreglos y funciones
+let persona1 = new Persona("Luis", 20);
+persona1.saludar();
+
+let numeros2 = [2, 4, 6, 8];
+
+function mostrarNumeros(lista) {
+    lista.forEach(function(num) {
+        console.log(num);
+    });
+}
+
+mostrarNumeros(numeros2);
+
+//Objetos con métodos
+let coche = {
+    marca: "Toyota",
+    modelo: "Corolla",
+    anio: 2022,
+
+    mostrarInfo: function() {
+        console.log(this.marca + " " + this.modelo);
+    }
+};
+
+coche.mostrarInfo();

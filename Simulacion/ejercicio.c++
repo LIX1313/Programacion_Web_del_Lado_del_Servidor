@@ -184,8 +184,8 @@ int main()
     int resultado = sumar(9, 98);
     cout << "El resultado es: " << resultado;
 
-    //Parte 8 Arreglos
-    // Arreglo estático
+    // Parte 8 Arreglos
+    //  Arreglo estático
     int numeros[5] = {1, 2, 3, 4, 5};
     cout << numeros[0];
 
@@ -199,11 +199,21 @@ int main()
     int matriz[2][2] = {{1, 2}, {3, 4}};
     cout << matriz[0][1];
 
-// Uso de vector (dinámico)
+    // Uso de vector (dinámico)
 
     /*vector<int> nums = {1, 2, 3};
     nums.push_back(4); */
+    // Uso de punteros básicos
 
+    int numero = 10;
+
+    int *puntero;
+
+    puntero = &numero;
+
+    cout << "Valor de numero: " << numero << endl;
+    cout << "Direccion de memoria: " << &numero << endl;
+    cout << "Valor usando puntero: " << *puntero << endl;
     return 0;
 }
 
