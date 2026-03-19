@@ -214,6 +214,38 @@ int main()
     cout << "Valor de numero: " << numero << endl;
     cout << "Direccion de memoria: " << &numero << endl;
     cout << "Valor usando puntero: " << *puntero << endl;
+
+    float numero3 = 5.5;
+    float *ptr;
+
+    ptr = &numero3;
+
+    cout << ptr << endl;
+
+    //Desferenciar
+        int x = 20;
+    int *p = &x;
+
+    cout << *p << endl; // muestra 20
+
+    //Modificar valor con puntero
+    int x = 5;
+    int *p = &x;
+
+    *p = 30;
+
+    cout << x << endl; // ahora vale 30
+
+    //Los arreglos están muy relacionados con punteros porque el nombre del arreglo es la dirección del primer elemento.
+        int numeros[3] = {10,20,30};
+    int *p = numeros;
+
+    cout << *p << endl; // 10
+    cout << *(p+1) << endl; // 20
+        for(int i=0;i<3;i++){
+        cout << *(p+i) << endl;
+    }
+
     return 0;
 }
 
