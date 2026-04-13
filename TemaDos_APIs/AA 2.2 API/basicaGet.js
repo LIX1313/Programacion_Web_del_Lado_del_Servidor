@@ -6,7 +6,9 @@ const obtenerUsuario = async () => {
       headers: {
         Authorization:
           "Basic " +
-          Buffer.from("eve,holt@reqres.in:pistol").toString("base64"),
+          Buffer.from("xxx,xxxx@reqxxx.xx:pistola").toString("base64"),
+          "x-api-key":
+            "pro_d9165432435eca6188aac97b8ebcd4509eee0f23ecb084e8e2a63628afdc7e28"
       },
     });
     console.log("Datos del usuario: ", response.data);
