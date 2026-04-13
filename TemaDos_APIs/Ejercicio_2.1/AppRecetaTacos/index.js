@@ -123,10 +123,10 @@ const recetasTacos = JSON.parse(recetaJSON);
 
 app.use(bodyParser.urlencoded({ extended: true })); //Habilitar el middleware
 app.use(express.static("public")); //Acceso a estilos
-app.use(bodyParser.json());
+app.use(bodyParser.json());// Para acceder a los datos enviados
 
 //Obtener datos
-app.get("/receta/:type", (req, res) => {
+app.get("/receta/:type", (req, res) => {  //proviene de la ruta dinámica en la URL, como /receta/:type, donde :type es un valor proporcionado por el cliente ("pollo" o "puerco").
   const elegirTaco = recetasTacos.find(
     (r) =>
       r.ingredientes.proteina.nombre.toLowerCase() ===
